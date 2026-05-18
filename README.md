@@ -61,3 +61,47 @@ fintech-review-analytics/
 ├── src/
 ├── tests/
 └── .github/
+
+## Project Workflow
+
+This project implements an end-to-end customer experience analytics pipeline:
+
+1. Scrape Google Play Store reviews for three Ethiopian banking apps
+2. Clean and preprocess review data
+3. Perform sentiment analysis using VADER
+4. Extract recurring customer experience themes
+5. Store processed review data in PostgreSQL
+6. Generate visualizations and business recommendations
+
+## Key Outputs
+
+- Cleaned review dataset
+- Sentiment analysis results
+- Theme classification results
+- PostgreSQL database schema
+- Dashboard visualizations
+- Final insights and recommendations
+
+## Main Scripts
+
+| Script | Purpose |
+|---|---|
+| `scripts/scrape_reviews.py` | Scrapes and preprocesses Google Play reviews |
+| `scripts/sentiment_analysis.py` | Performs sentiment analysis |
+| `scripts/theme_extraction.py` | Identifies recurring review themes |
+| `scripts/visualize_sentiment.py` | Generates sentiment distribution chart |
+| `scripts/rating_visualization.py` | Generates rating distribution chart |
+| `scripts/theme_visualization.py` | Generates theme frequency chart |
+| `scripts/database_insert.py` | Inserts processed data into PostgreSQL |
+
+## Database
+
+The PostgreSQL database is named `bank_reviews` and contains two tables:
+
+- `banks`
+- `reviews`
+
+The schema is available in:
+
+```text
+database/schema.sql
